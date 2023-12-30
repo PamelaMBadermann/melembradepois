@@ -7,6 +7,12 @@ Para rodar, basta clonar o repositório, rodar `npm install` e em seguida `npm r
 > [!IMPORTANT]
 > Este é um projeto de portfólio pessoal em construção. :hourglass_flowing_sand:
 
+Bom, aproveitando que está aqui, me manda uma solicitação de conexão lá no [Linkedin](https://www.linkedin.com/in/pamelabadermann/)!
+
+Obrigadaaaaa!
+
+Pam Badermann
+
 ## ♥
 
 ## ![Screenshot of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
@@ -21,5 +27,9 @@ To run, clone the repository, run `npm install` and then `npm run build`.
 > This is a personal portfolio project under construction. :hourglass_flowing_sand:
 
 Well, while you're here, send me a connection request on [Linkedin](https://www.linkedin.com/in/pamelabadermann/)! ♥
+
+Thanksssss!
+
+Pam Badermann
 
 ## ♥
