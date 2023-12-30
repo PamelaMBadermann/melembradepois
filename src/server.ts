@@ -3,21 +3,32 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import "reflect-metadata"
 
-
+import { AppDataSource } from "./data-source"
+import { UserEntity } from "./entity/UserEntity"
 import { Router, Request, Response } from 'express';
+
+AppDataSource.initialize()
+  .then(() => {
+    console.log("Data Source has been initialized!")
+  })
+  .catch((err) => {
+    console.error("Error during Data Source initialization:", err)
+  });
 
 dotenv.config();
 
 const app = express();
 
-const route = Router()
 
 app.listen(5500, () => console.log('Rodando na porta 5500'))
 
 app.use(cors())
 
-app.use(express.json())
+app.use(express.json());
 
+
+
+/*
 let users = [{
   id: 1,
   name: "pame"
@@ -71,3 +82,4 @@ route.delete('/:id', (req: Request, res: Response) => {
 })
 
 app.use(route);
+**/
