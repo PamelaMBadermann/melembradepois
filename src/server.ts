@@ -1,10 +1,10 @@
 import express from 'express'
-//import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import cors from 'cors';
 
 import { Router, Request, Response } from 'express';
 
-//dotenv.config();
+dotenv.config();
 
 const app = express();
 
@@ -59,5 +59,13 @@ route.put('/:id', (req: Request, res: Response) => {
 
   res.json("updated user")
 });
+
+route.delete('/:id', (req: Request, res: Response) => {
+  const userId = req.params.id
+
+  users = users.filter(user => Number(user.id) !== Number(userId))
+
+  res.json('Deleted User')
+})
 
 app.use(route);
