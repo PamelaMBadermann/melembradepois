@@ -20,6 +20,7 @@ Bom, aproveitando que está aqui, me manda uma solicitação de conexão lá no 
 # Remember later! :pencil:
 
 This is an application that serves as a post-it in your browser.
+
 Simple and objective, helping you remember what can't be forgotten! :no_good:
 
 To run this project, clone the repository, run `npm install` and then `npm run build`.
@@ -31,6 +32,6 @@ Thanksssss!
 
 Pam Badermann.
 
-Well, while you're here, send me a connection request on [Linkedin](https://www.linkedin.com/in/pamelabadermann/)! ♥
+Well, while you're here, send me a connection request on [Linkedin](https://www.linkedin.com/in/pamelabadermann/)!
 
 ## ♥
