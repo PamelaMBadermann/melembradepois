@@ -7,18 +7,9 @@ import { AppDataSource } from "./data-source"
 import { UserEntity } from "./entity/UserEntity"
 import { Router, Request, Response } from 'express';
 
-AppDataSource.initialize()
-  .then(() => {
-    console.log("Data Source has been initialized!")
-  })
-  .catch((err) => {
-    console.error("Error during Data Source initialization:", err)
-  });
-
 dotenv.config();
 
 const app = express();
-
 
 app.listen(5500, () => console.log('Rodando na porta 5500'))
 
@@ -26,60 +17,60 @@ app.use(cors())
 
 app.use(express.json());
 
+const userRepository = AppDataSource.getRepository(UserEntity)
 
+app.get("/users", async function (req: Request, res: Response) {
+  const users = await userRepository.find()
 
-/*
-let users = [{
-  id: 1,
-  name: "pame"
-}];
-
-route.get('/', (req: Request, res: Response) => {
-  res.json({ message: users })
+  res.json(users)
 });
 
-route.post('/', (req: Request, res: Response) => {
-  const lastId = users[users.length - 1].id
+app.post("/users", async function (req: Request, res: Response) {
+  const user = new UserEntity();
+  user.username = req.body.username;
+  user.password = req.body.password;
 
-  users.push({
-    id: lastId + 1,
-    name: req.body.name,
-  });
+  await userRepository.save(user)
 
-  res.json("saved user")
+  res.json(user)
 });
 
-route.put('/:id', (req: Request, res: Response) => {
-  const userId = req.params.id;
+app.get("/users/:uid", async function (req: Request, res: Response) {
+  const user = await userRepository.findOneBy({ uid: req.params.uid })
 
-  const user = users.find(user => Number(user.id) === Number(userId))
+  res.json(user)
+});
 
-  if (!user) {
-    return res.json('user not found!')
-  }
+app.put("/users/:uid", async function (req: Request, res: Response) {
+  let user: UserEntity | null;
+  user = await userRepository.findOneBy({ uid: req.params.uid })
 
-  const updatedUser = {
-    ...user,
-    name: req.body.name,
-  }
-
-  users = users.map(user => {
-    if (Number(user.id) === Number(userId)) {
-      user = updatedUser
+  if (user != null) {
+    if (req.body.username) {
+      user.username = req.body.username;
+    } else if (req.body.password) {
+      user.password = req.body.password;
+    } else {
+      res.json("nothing change")
     }
-    return user
-  })
 
-  res.json("updated user")
+    await userRepository.save(user)
+  } else {
+    res.json("put fail: user undefined")
+  }
+
+  res.json(user)
 });
 
-route.delete('/:id', (req: Request, res: Response) => {
-  const userId = req.params.id
+app.delete("/users/:uid", async function (req: Request, res: Response) {
+  let user: UserEntity | null;
+  user = await userRepository.findOneBy({ uid: req.params.uid })
 
-  users = users.filter(user => Number(user.id) !== Number(userId))
+  if (user != null) {
+    await userRepository.remove(user)
 
-  res.json('Deleted User')
-})
-
-app.use(route);
-**/
+    res.json("deleted user")
+  } else {
+    res.json("delete fail: user undefined")
+  }
+});

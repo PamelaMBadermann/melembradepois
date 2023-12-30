@@ -1,10 +1,10 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate, OneToMany } from "typeorm";
+import { Entity, BaseEntity, PrimaryColumn, Column, BeforeInsert, BeforeUpdate, OneToMany } from "typeorm";
 import { v4 as uuid } from 'uuid';
 import { PostItItemEntity } from './PostItItemEntity';
 
 @Entity({ name: 'users' })
 export class UserEntity extends BaseEntity {
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     uid!: string;
 
     @Column()

@@ -15,4 +15,12 @@ export const AppDataSource = new DataSource({
   entities: [UserEntity, PostItItemEntity],
   migrations: [],
   subscribers: [],
-})
+});
+
+AppDataSource.initialize()
+  .then(async () => {
+    console.log("Data Source has been initialized!")
+  })
+  .catch((err) => {
+    console.error("Error during Data Source initialization:", err)
+  });
