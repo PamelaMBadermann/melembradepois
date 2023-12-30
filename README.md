@@ -11,13 +11,13 @@ Para rodar esse projeto basta clonar o repositório, rodar `npm install` e em se
 
 Obrigadaaaaa!
 
-Pam Badermann
+Pam Badermann.
 
 Bom, aproveitando que está aqui, me manda uma solicitação de conexão lá no [Linkedin](https://www.linkedin.com/in/pamelabadermann/)!
 
 ## ♥
 
-## ![Screenshot of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+##
 
 # Remember later! :pencil:
 
@@ -31,8 +31,10 @@ To run this project, clone the repository, run `npm install` and then `npm run b
 
 Thanksssss!
 
-Pam Badermann
+Pam Badermann.
 
 Well, while you're here, send me a connection request on [Linkedin](https://www.linkedin.com/in/pamelabadermann/)! ♥
 
 ## ♥
+
+##
