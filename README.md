@@ -17,8 +17,6 @@ Bom, aproveitando que está aqui, me manda uma solicitação de conexão lá no 
 
 ## ♥
 
-##
-
 # Remember later! :pencil:
 
 This is an application that serves as a post-it in your browser.
@@ -36,5 +34,3 @@ Pam Badermann.
 Well, while you're here, send me a connection request on [Linkedin](https://www.linkedin.com/in/pamelabadermann/)! ♥
 
 ## ♥
-
-##
