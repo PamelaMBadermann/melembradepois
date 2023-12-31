@@ -4,7 +4,13 @@ Essa é uma aplicação que serve como um post-it em seu navegador.
 
 Simples e objetiva, te ajudando a lembrar do que não pode ser esquecido! :no_good:
 
-Para rodar esse projeto basta clonar o repositório, rodar `npm install` e em seguida `npm run build`.
+Para rodar esse projeto basta clonar o repositório, rodar:
+
+```
+`npm install`
+`npm run build`.
+`npm run start`
+```
 
 > [!IMPORTANT]
 > Este é um projeto de portfólio pessoal em construção. :hourglass_flowing_sand:
