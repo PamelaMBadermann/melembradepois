@@ -4,12 +4,12 @@ Essa é uma aplicação que serve como um post-it em seu navegador.
 
 Simples e objetiva, te ajudando a lembrar do que não pode ser esquecido! :no_good:
 
-Para rodar esse projeto basta clonar o repositório, rodar:
+Clone o repositório e rode os seguintes comandos:
 
 ```
-`npm install`
-`npm run build`.
-`npm run start`
+npm install
+npm run build
+npm run start
 ```
 
 > [!IMPORTANT]
@@ -29,7 +29,13 @@ This is an application that serves as a post-it in your browser.
 
 Simple and objective, helping you remember what can't be forgotten! :no_good:
 
-To run this project, clone the repository, run `npm install` and then `npm run build`.
+Clone the repository and run the following commands:
+
+```
+npm install
+npm run build
+npm run start
+```
 
 > [!IMPORTANT]
 > This is a personal portfolio project under construction. :hourglass_flowing_sand:
