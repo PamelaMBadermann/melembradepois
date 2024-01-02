@@ -1,12 +1,8 @@
-import dotenv from 'dotenv';
-import "reflect-metadata";
+import { Request, Response } from 'express';
 
 import { AppDataSource } from "./data-source"
 import { UserEntity } from "./entity/UserEntity"
-import { Request, Response } from 'express';
 import { app } from "./core/presentation/App";
-
-dotenv.config();
 
 const userRepository = AppDataSource.getRepository(UserEntity)
 
