@@ -2,8 +2,8 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import dotenv from 'dotenv';
 
-import { UserEntity } from "./entity/UserEntity";
-import { PostItItemEntity } from "./entity/PostItItemEntity";
+import { UserEntity } from "./core/infra/data/database/entity/UserEntity";
+import { PostItItemEntity } from "./core/infra/data/database/entity/PostItItemEntity";
 
 dotenv.config();
 
