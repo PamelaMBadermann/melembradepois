@@ -1,21 +1,12 @@
-import express from 'express'
 import dotenv from 'dotenv';
-import cors from 'cors';
-import "reflect-metadata"
+import "reflect-metadata";
 
 import { AppDataSource } from "./data-source"
 import { UserEntity } from "./entity/UserEntity"
-import { Router, Request, Response } from 'express';
+import { Request, Response } from 'express';
+import { app } from "./core/presentation/App";
 
 dotenv.config();
-
-const app = express();
-
-app.listen(5500, () => console.log('Rodando na porta 5500'))
-
-app.use(cors())
-
-app.use(express.json());
 
 const userRepository = AppDataSource.getRepository(UserEntity)
 
