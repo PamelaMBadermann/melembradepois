@@ -2,7 +2,7 @@ import { Entity, BaseEntity, PrimaryColumn, Column, BeforeInsert, BeforeUpdate, 
 import { v4 as uuid } from "uuid";
 import { UserEntity } from "./UserEntity";
 
-@Entity({ name: 'postItItems' })
+@Entity({ name: "postItItems" })
 export class PostItItemEntity extends BaseEntity {
     @PrimaryColumn()
     uid!: string;
