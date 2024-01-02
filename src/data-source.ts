@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 
 import { UserEntity } from "./core/infra/data/database/entity/UserEntity";
 import { PostItItemEntity } from "./core/infra/data/database/entity/PostItItemEntity";
+import { CreateUsers1704231273469 } from "./core/infra/data/database/migration/1704231273469-CreateUser";
+import { CreatePostItItems1704233490943 } from "./core/infra/data/database/migration/1704233490943-CreatePostItItem";
 
 dotenv.config();
 
@@ -17,8 +19,9 @@ const AppDataSource = new DataSource({
   synchronize: true,
   logging: false,
   entities: [UserEntity, PostItItemEntity],
-  migrations: [],
+  migrations: [CreateUsers1704231273469, CreatePostItItems1704233490943],
   subscribers: [],
+  migrationsTableName: "migration",
 });
 
 export default AppDataSource;
