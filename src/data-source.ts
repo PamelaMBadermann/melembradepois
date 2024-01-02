@@ -7,7 +7,7 @@ import { PostItItemEntity } from "./core/infra/data/database/entity/PostItItemEn
 
 dotenv.config();
 
-export const AppDataSource = new DataSource({
+const AppDataSource = new DataSource({
   type: "postgres",
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
@@ -20,3 +20,5 @@ export const AppDataSource = new DataSource({
   migrations: [],
   subscribers: [],
 });
+
+export default AppDataSource;

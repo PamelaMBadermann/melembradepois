@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 
-import { AppDataSource } from "../../../data-source"
+import AppDataSource from "../../../data-source";
 import { UserEntity } from "../../infra/data/database/entity/UserEntity"
 
 const userRepository = AppDataSource.getRepository(UserEntity)
 
-export function makeController(app: any) {
+export default function makeController(app: any) {
   app.get("/users", async function (req: Request, res: Response) {
     const users = await userRepository.find()
 

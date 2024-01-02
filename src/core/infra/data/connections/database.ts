@@ -1,5 +1,5 @@
 import "reflect-metadata"
-import { AppDataSource } from "../../../../data-source";
+import AppDataSource from "../../../../data-source";
 
 export default function Connection() {
 
@@ -7,7 +7,7 @@ export default function Connection() {
     .then(async () => {
       console.log("Data Source has been initialized!")
     })
-    .catch((err) => {
+    .catch((err: any) => {
       console.error("Error during Data Source initialization:", err)
     });
 }
