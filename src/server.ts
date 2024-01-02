@@ -3,6 +3,9 @@ import { Request, Response } from 'express';
 import { AppDataSource } from "./data-source"
 import { UserEntity } from "./entity/UserEntity"
 import { app } from "./core/presentation/App";
+import Connection from './core/infra/data/connections/database';
+
+Connection();
 
 const userRepository = AppDataSource.getRepository(UserEntity)
 
