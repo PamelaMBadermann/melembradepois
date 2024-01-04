@@ -1,9 +1,9 @@
 import { Entity, BaseEntity, PrimaryColumn, Column, BeforeInsert, BeforeUpdate, OneToMany } from "typeorm";
 import { v4 as uuid } from 'uuid';
-import { PostItItemEntity } from './PostItItemEntity';
+import { PostItItemsEntity } from './PostItItemsEntity';
 
 @Entity({ name: "users" })
-export class UserEntity extends BaseEntity {
+export class UsersEntity extends BaseEntity {
     @PrimaryColumn("uuid")
     uid!: string;
 
@@ -19,8 +19,8 @@ export class UserEntity extends BaseEntity {
     @Column({ name: 'updated_at' })
     updatedAt!: Date;
 
-    @OneToMany(type => PostItItemEntity, postItItem => postItItem.user)
-    postItItems!: PostItItemEntity[];
+    @OneToMany(type => PostItItemsEntity, postItItem => postItItem.user)
+    postItItems!: PostItItemsEntity[];
 
     @BeforeInsert()
     private beforeInsert() {

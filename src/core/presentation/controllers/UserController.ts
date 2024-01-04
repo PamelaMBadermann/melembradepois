@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 
 import AppDataSource from "../../../data-source";
-import { UserEntity } from "../../infra/data/database/entity/UserEntity"
+import { UsersEntity } from "../../infra/data/database/entity/UsersEntity"
 
-const userRepository = AppDataSource.getRepository(UserEntity)
+const userRepository = AppDataSource.getRepository(UsersEntity)
 
 export default function makeController(app: any) {
   app.get("/users", async function (req: Request, res: Response) {
@@ -13,7 +13,7 @@ export default function makeController(app: any) {
   });
 
   app.post("/users", async function (req: Request, res: Response) {
-    const user = new UserEntity();
+    const user = new UsersEntity();
     user.username = req.body.username;
     user.password = req.body.password;
 
@@ -29,7 +29,7 @@ export default function makeController(app: any) {
   });
 
   app.put("/users/:uid", async function (req: Request, res: Response) {
-    let user: UserEntity | null;
+    let user: UsersEntity | null;
     user = await userRepository.findOneBy({ uid: req.params.uid })
 
     if (user != null) {
@@ -50,7 +50,7 @@ export default function makeController(app: any) {
   });
 
   app.delete("/users/:uid", async function (req: Request, res: Response) {
-    let user: UserEntity | null;
+    let user: UsersEntity | null;
     user = await userRepository.findOneBy({ uid: req.params.uid })
 
     if (user != null) {
