@@ -2,8 +2,10 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import dotenv from 'dotenv';
 
-import { UserEntity } from "./core/infra/data/database/entity/UserEntity";
-import { PostItItemEntity } from "./core/infra/data/database/entity/PostItItemEntity";
+import { UsersEntity } from "./core/infra/data/database/entity/UsersEntity";
+import { PostItItemsEntity } from "./core/infra/data/database/entity/PostItItemsEntity";
+import { CreateUsers1704231273469 } from "./core/infra/data/database/migration/1704231273469-CreateUser";
+import { CreatePostItItems1704233490943 } from "./core/infra/data/database/migration/1704233490943-CreatePostItItem";
 
 dotenv.config();
 
@@ -16,9 +18,10 @@ const AppDataSource = new DataSource({
   database: process.env.DB_DATABASE,
   synchronize: true,
   logging: false,
-  entities: [UserEntity, PostItItemEntity],
-  migrations: [],
+  entities: [UsersEntity, PostItItemsEntity],
+  migrations: [CreateUsers1704231273469, CreatePostItItems1704233490943],
   subscribers: [],
+  migrationsTableName: "migration",
 });
 
 export default AppDataSource;

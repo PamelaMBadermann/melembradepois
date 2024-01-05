@@ -1,9 +1,9 @@
 import { Entity, BaseEntity, PrimaryColumn, Column, BeforeInsert, BeforeUpdate, ManyToOne, JoinColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
-import { UserEntity } from "./UserEntity";
+import { UsersEntity } from "./UsersEntity";
 
-@Entity({ name: 'postItItems' })
-export class PostItItemEntity extends BaseEntity {
+@Entity({ name: "postItItems" })
+export class PostItItemsEntity extends BaseEntity {
     @PrimaryColumn()
     uid!: string;
 
@@ -22,9 +22,9 @@ export class PostItItemEntity extends BaseEntity {
     @Column({ name: 'updated_at' })
     updatedAt!: Date;
 
-    @ManyToOne(type => UserEntity, user => user.postItItems)
+    @ManyToOne(type => UsersEntity, user => user.postItItems)
     @JoinColumn({ name: 'user_uid', referencedColumnName: 'uid' })
-    user!: UserEntity;
+    user!: UsersEntity;
 
     @BeforeInsert()
     private beforeInsert() {
