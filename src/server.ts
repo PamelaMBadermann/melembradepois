@@ -1,7 +1,9 @@
 
 import Connection from './core/infra/data/connections/database';
-import { app } from "./core/presentation/App";
-import makeController from './core/presentation/controllers/UserController';
+import { startApp } from './core/presentation/App';
+import makeUsersController from './core/presentation/controllers/UserController';
+
+const app = startApp();
 
 Connection();
-makeController(app);
+makeUsersController(app);
