@@ -1,2 +1,2 @@
 export * from './user.model';
-export * from './anottation.model';
+export * from './postItItem.model';
