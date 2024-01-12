@@ -1,7 +1,7 @@
 import "reflect-metadata"
 import AppDataSource from "../../../../data-source";
 
-export default function Connection() {
+export default function databaseConnection() {
 
   AppDataSource.initialize()
     .then(async () => {
