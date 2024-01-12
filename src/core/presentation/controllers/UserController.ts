@@ -4,14 +4,14 @@ import makeRoutes from "../routes/routes";
 
 const route = "users";
 const repository = AppDataSource.getRepository(UsersEntity);
-const newUser = new UsersEntity();
+const newEntity = new UsersEntity();
 
-export default function makeUserController(app: any) {
+export default async function makeUserController(app: any) {
   let userInfo = {
     route,
     repository,
-    newUser
+    newEntity
   }
 
-  makeRoutes(app, userInfo);
+  await makeRoutes(app, userInfo);
 }
