@@ -7,7 +7,7 @@ Simples e objetiva, te ajudando a lembrar do que não pode ser esquecido! :no_go
 > [!IMPORTANT]
 > Para rodar na tua máquina um clone desse repositório, tu precisa já ter instalado [Node](https://nodejs.org/en/download) e [Postgres](https://www.postgresql.org/download/). A IDE que desenvolvi o código foi [VSCode](https://code.visualstudio.com/download) e todas as rotas foram testadas no [Postman](https://www.postman.com/downloads/).
 
-Clone o repositório e rode `npm install`
+Clone o repositório e rode `npm install`.
 
 Agora é necessário fazer uma cópia do arquivo example.env, renomeá-lo para .env e atribuir valores às variáveis de ambiente de acordo com a tua database no Postgres. :floppy_disk:
 
@@ -35,7 +35,7 @@ Simple and objective, helping you remember what can't be forgotten! :no_good:
 > [!IMPORTANT]
 > To run a clone of this repository on your machine, you need to already have [Node](https://nodejs.org/en/download) and [Postgres](https://www.postgresql.org/download/) installed. The IDE that I developed code was [VSCode](https://code.visualstudio.com/download) and all routes were tested in [Postman](https://www.postman.com/downloads/).
 
-Clone the repository and run `npm install`
+Clone the repository and run `npm install`.
 
 Now you need to make a copy of the example.env file, rename to .env and set values to the environment variables of your Postgres database :floppy_disk:
 
