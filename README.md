@@ -18,7 +18,7 @@ npm run build
 npm run start
 ```
 
-Obrigada pela visita!
+Obrigada pela visita! :sparkles:
 
 Pam Badermann.
 
@@ -46,7 +46,7 @@ npm run build
 npm run start
 ```
 
-Thanks for visit!
+Thanks for visit! :sparkles:
 
 Pam Badermann.
 
