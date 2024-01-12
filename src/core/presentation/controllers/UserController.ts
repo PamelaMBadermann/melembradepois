@@ -1,8 +1,17 @@
+import AppDataSource from "../../../data-source";
 import { UsersEntity } from "../../infra/data/database/entity/UsersEntity"
-import makeUserRoutes from '../routes/userRoutes';
+import makeRoutes from "../routes/routes";
 
 const route = "users";
+const repository = AppDataSource.getRepository(UsersEntity);
+const newUser = new UsersEntity();
 
 export default function makeUserController(app: any) {
-  makeUserRoutes(app)
+  let userInfo = {
+    route,
+    repository,
+    newUser
+  }
+
+  makeRoutes(app, userInfo);
 }
