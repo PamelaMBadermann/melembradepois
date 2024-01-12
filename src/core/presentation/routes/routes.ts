@@ -3,10 +3,10 @@ import { Request, Response } from 'express';
 import makePostItItemsController from '../controllers/PostItItemsController';
 
 
-export default function makeRoutes(app: any, info: any) {
+export default async function makeRoutes(app: any, info: any) {
   const { route, repository, newEntity } = info;
 
-  app.get(`/${route}`, async function (req: Request, res: Response) {
+  await app.get(`/${route}`, async function (req: Request, res: Response) {
     try {
       let repositoryItems;
 
@@ -29,7 +29,7 @@ export default function makeRoutes(app: any, info: any) {
     }
   });
 
-  app.post(`/${route}`, async function (req: Request, res: Response) {
+  await app.post(`/${route}`, async function (req: Request, res: Response) {
     try {
       if (route === "users") {
         const { username, password } = req.body;
@@ -37,11 +37,12 @@ export default function makeRoutes(app: any, info: any) {
         newEntity.username = username;
         newEntity.password = password;
       } else {
-        const { title, description, userUID } = req.body;
+        const { title, description, userUID, color } = req.body;
 
         newEntity.title = title;
         newEntity.description = description;
         newEntity.userUID = userUID;
+        newEntity.color = color;
       }
       await repository.save(newEntity)
 
@@ -53,7 +54,7 @@ export default function makeRoutes(app: any, info: any) {
     }
   });
 
-  app.get(`/${route}/:uid`, async function (req: Request, res: Response) {
+  await app.get(`/${route}/:uid`, async function (req: Request, res: Response) {
     try {
       const { uid } = req.params;
 
@@ -68,7 +69,7 @@ export default function makeRoutes(app: any, info: any) {
 
           res.json(repositoryEntity)
         } else {
-          res.json("Usuário ou  senha incorretos.")
+          res.json("Usuário ou senha incorretos.")
         }
       } else {
         let repositoryEntity = await repository.findOneBy({ uid: uid })
@@ -82,7 +83,7 @@ export default function makeRoutes(app: any, info: any) {
     }
   });
 
-  app.put(`/${route}/:uid`, async function (req: Request, res: Response) {
+  await app.put(`/${route}/:uid`, async function (req: Request, res: Response) {
     try {
       const { uid } = req.params;
 
@@ -94,11 +95,12 @@ export default function makeRoutes(app: any, info: any) {
         repositoryEntity.username = username;
         repositoryEntity.password = password;
       } else {
-        const { title, description, userUID } = req.body;
+        const { title, description, userUID, color } = req.body;
 
         repositoryEntity.title = title;
         repositoryEntity.description = description;
         repositoryEntity.userUID = userUID;
+        repositoryEntity.color = color;
       }
 
       await repository.save(repositoryEntity)
@@ -111,7 +113,7 @@ export default function makeRoutes(app: any, info: any) {
     }
   });
 
-  app.delete(`/${route}/:uid`, async function (req: Request, res: Response) {
+  await app.delete(`/${route}/:uid`, async function (req: Request, res: Response) {
     try {
       const { uid } = req.params;
 
