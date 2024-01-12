@@ -16,6 +16,7 @@ Agora é necessário fazer uma cópia do arquivo example.env, renomeá-lo para .
 Feito isso, rode os próximos comandos e é só alegria! :smile:
 
 ```
+npm run typeorm migration:run src/data-source.ts
 npm run build
 npm run start
 ```
@@ -46,6 +47,7 @@ Now you need to make a copy of the example.env file, rename to .env and set valu
 Done it, run the following commands and be happy! :smile:
 
 ```
+npm run typeorm migration:run src/data-source.ts
 npm run build
 npm run start
 ```
