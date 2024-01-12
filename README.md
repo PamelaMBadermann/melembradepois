@@ -1,8 +1,10 @@
 # Relembre depois! :pencil:
 
-Essa é uma aplicação que serve como um post-it em seu navegador.
+Simples e objetivo, te ajudando a lembrar do que não pode ser esquecido! :no_good:
 
-Simples e objetiva, te ajudando a lembrar do que não pode ser esquecido! :no_good:
+Olááá,
+
+Esse é o backend do App Relembre Depois, que é uma aplicação que serve como um post-it em seu navegador.
 
 > [!IMPORTANT]
 > Para rodar na tua máquina um clone desse repositório, tu precisa já ter instalado [Node](https://nodejs.org/en/download) e [Postgres](https://www.postgresql.org/download/). A IDE que desenvolvi o código foi [VSCode](https://code.visualstudio.com/download) e todas as rotas foram testadas no [Postman](https://www.postman.com/downloads/).
@@ -18,7 +20,7 @@ npm run build
 npm run start
 ```
 
-Obrigada pela visita! :sparkles:
+Espero que goste e obrigada pela visita! :sparkles:
 
 Pam Badermann.
 
@@ -28,9 +30,11 @@ Bom, aproveitando que está aqui, me manda uma solicitação de conexão lá no 
 
 # Remember later! :pencil:
 
-This is an application that serves as a post-it in your browser.
-
 Simple and objective, helping you remember what can't be forgotten! :no_good:
+
+Hellooo,
+
+This is the backend from Remember Later App, that's an application that serves as a post-it in your browser.
 
 > [!IMPORTANT]
 > To run a clone of this repository on your machine, you need to already have [Node](https://nodejs.org/en/download) and [Postgres](https://www.postgresql.org/download/) installed. The IDE that I developed code was [VSCode](https://code.visualstudio.com/download) and all routes were tested in [Postman](https://www.postman.com/downloads/).
@@ -46,7 +50,7 @@ npm run build
 npm run start
 ```
 
-Thanks for visit! :sparkles:
+Hope you like and thanks for visit! :sparkles:
 
 Pam Badermann.
 
