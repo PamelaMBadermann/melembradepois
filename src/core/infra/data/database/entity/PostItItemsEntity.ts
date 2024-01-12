@@ -13,6 +13,9 @@ export class PostItItemsEntity extends BaseEntity {
     @Column()
     description!: string;
 
+    @Column()
+    color!: string;
+
     @Column({ name: 'user_uid' })
     userUID!: string;
 
