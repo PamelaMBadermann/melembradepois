@@ -21,7 +21,8 @@ npm run build
 npm run start
 ```
 
-> [!NOTE] > [Frontend](https://github.com/PamelaMBadermann/relembredepois-frontend) do projeto está em fase de construção! :hourglass_flowing_sand:
+> [!NOTE]
+> [Frontend](https://github.com/PamelaMBadermann/relembredepois-frontend) do projeto está em fase de construção! :hourglass_flowing_sand:
 
 Espero que goste e obrigada pela visita! :sparkles:
 
