@@ -7,7 +7,7 @@ Olááá,
 Esse é o backend do App Relembre Depois, que é uma aplicação que serve como um post-it em seu navegador.
 
 > [!IMPORTANT]
-> Para rodar na tua máquina um clone desse repositório, tu precisa já ter instalado [Node](https://nodejs.org/en/download) e [Postgres](https://www.postgresql.org/download/). A IDE que desenvolvi o código foi [VSCode](https://code.visualstudio.com/download) e todas as rotas foram testadas no [Postman](https://www.postman.com/downloads/).
+> Para rodares na tua máquina um clone desse repositório, tu precisas já ter instalado [Node](https://nodejs.org/en/download) e [Postgres](https://www.postgresql.org/download/). A IDE que desenvolvi o código foi [VSCode](https://code.visualstudio.com/download) e todas as rotas foram testadas no [Postman](https://www.postman.com/downloads/).
 
 Clone o repositório e rode `npm install`.
 
@@ -20,6 +20,8 @@ npm run typeorm migration:run src/data-source.ts
 npm run build
 npm run start
 ```
+
+> [!NOTE] > [Frontend](https://github.com/PamelaMBadermann/relembredepois-frontend) do projeto está em fase de construção! :hourglass_flowing_sand:
 
 Espero que goste e obrigada pela visita! :sparkles:
 
@@ -51,6 +53,9 @@ npm run typeorm migration:run src/data-source.ts
 npm run build
 npm run start
 ```
+
+> [!NOTE]
+> Project [Frontend](https://github.com/PamelaMBadermann/relembredepois-frontend) is under construction! :hourglass_flowing_sand:
 
 Hope you like and thanks for visit! :sparkles:
 
